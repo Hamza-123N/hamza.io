@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hamza.io</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="colors.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo">Hamza-123N</h1>
+    <nav class="navbar">
+      <div class="nav-buttons">
+        <a href="#products" class="lang-switch">Works</a>
+        <a href="#about" class="lang-switch">About</a>
+        <a href="#contact" class="lang-switch lang">Contact</a>
+      </div>
+      <a href="index_ar.html" class="lang-switch">العربية</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="assets/hero.png" alt="Cristiano Ronaldo" class="hero-bg">
+    <div class="hero-content">
+      <h2 class="hero-title">I'm Hamza Nakib</h2>
+      <p class="hero-subtitle">Game Developer | Web Developer | Programing Learner</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-text">
+      hey, I'm Hamza, a guy who got intrested in programming. I learned how to script in 5 laguages, Python, GDscript, HTML, CSS and JavaScript. I have tested game development and web development. When i started, i thougt it was hard, but it wasn't. If you want to learn and think it's hard. Believe me, it's easy
+    </p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="section products-section">
+    <h2 class="section-title">My Works</h2>
+    <div>
+      <ul class="product-grid">
+        <li class="product-card lang-switch">
+          <a href="https://hamza-123n.github.io/tictactoe/" target="_blank"><u>tic tac toe game</u></a>
+        </li>
+        <li class="product-card lang-switch itchio-card">
+          <a href="https://hamza-123n.itch.io">
+            <img src="assets/itchio.png" alt="itch.io logo" width="40px" height="40px"/>
+            <span>All my games on itch.io</span>
+          </a>
+        </li>  
+        <li class="product-card lang-switch">
+          <a href="https://hamza-123n.github.io/PIN-generator/" target="_blank"><u>password editor</u></a>
+        </li>   
+        <li class="product-card lang-switch">
+          <a href="https://hamza-123n.github.io/clicker-game/" target="_blank"><u>clicker game</u></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer" id="contact">
+    <div class="footer-content">
+      <div class="footer-container">
+        <h3 class="footer-title"><u>Contact Me</u></h3>
+        <form class="footer-form" onsubmit="handleForm(event)">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit" class="lang-switch">Send Message</button>
+        </form>
+      </div>
+
+      <div class="social-media">
+        <h3 class="footer-title"><u>contact with other media</u></h3>
+        <div class="contact-details">
+          <div class="contact-item">
+            <img src="assets/Email.svg" alt="Email" class="small-icon" />
+            <span><u>nakibhamza113@gmail.com</u></span>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/hamza-123n" target="_blank">
+            <img src="assets/github_1.svg" alt="GitHub" class="large-icon" />
+          </a>
+          <a href="https://www.sololearn.com/en/profile/33823777" target="_blank">
+            <img src="assets/solo.webp" alt="Sololearn" class="large-icon" />
+          </a>
+          <a href="https://hamza-123n.itch.io" target="_blank">
+            <img src="assets/itch.io_contact.svg" alt="Sololearn" class="large-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <p class="footer-copy">&copy; Hamza Nakib website 2025. Everything for you.<br>Built by Hamza Nakib</p>
+  </div>
+
+  <script>
+    function handleForm(event) {
+      event.preventDefault();
+      const name = event.target.querySelector('input[type="text"]').value;
+      const message = `Thanks, ${name}! Your message has been sent 🚀`;
+      alert(message);
+    }
+  </script>
+</body>
+</html>

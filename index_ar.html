@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>موقع حمزة</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="colors.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo-ar">Hamza-123N</h1>
+    <nav class="navbar">
+      <div class="nav-buttons">
+        <a href="#products" class="lang-switch">اعملي</a>
+        <a href="#about" class="lang-switch">من انا</a>
+        <a href="#contact" class="lang-switch">تواصل</a>
+      </div>
+      <a href="index.html" class="lang-switch">English</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="assets/hero.png" alt="Cristiano Ronaldo" class="hero-bg">
+    <div class="hero-content">
+      <h2 class="hero-title">انا حمزة النقيب</h2>
+      <p class="hero-subtitle">متعلم برمجة. مطور العاب. مطور مواقع</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <h2 class="section-title">من انا</h2>
+    <p class="section-text">
+      مرحباً، أنا حمزة، شابٌّ شغوفٌ بالبرمجة. تعلمتُ كتابة النصوص البرمجية خمس لغات: python، GDscript، HTML ،CSS  و JavaScript. اختبرتُ تطوير الألعاب والويب. عندما بدأتُ، ظننتُ الأمر صعباً، لكنه لم يكن كذلك. إذا كنتَ ترغب في التعلم وتعتقد أنه صعب، صدقني، إنه سهل.
+    </p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="section products-section">
+    <h2 class="section-title">اعمالي</h2>
+    <div>
+      <ul class="product-grid">
+        <li class="product-card lang-switch">
+            <a href="https://hamza-123n.github.io/tictactoe/" target="_blank"><u>لعبة اكس او</u></a>
+        </li>
+        <li class="product-card lang-switch itchio-card">
+          <a href="https://hamza-123n.itch.io">
+            <img src="assets/itchio.png" alt="itch.io logo" width="40px" height="40px"/>
+            <span>كل اعمالي على itch.io</span>
+          </a>
+        </li>  
+        <li class="product-card lang-switch">
+            <a href="https://hamza-123n.github.io/clicker-game/" target="_blank"><u>لعبة الزر</u></a>
+        </li>
+        <li class="product-card lang-switch">
+            <a href="https://hamza-123n.github.io/PIN-generator/" target="_blank"><u>محرر كلمات المرور</u></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer" id="contact">
+    <div class="footer-content">
+      <div class="footer-container">
+        <h3 class="footer-title"><u>تواصل مباشرتا</u></h3>
+        <form class="footer-form" onsubmit="handleForm(event)">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit" class="lang-switch">ارسل رسالتك</button>
+        </form>
+      </div>
+
+      <div class="social-media">
+        <h3 class="footer-title"><u>تواصل بطرق اخرى</u></h3>
+        <div class="contact-details">
+          <div class="contact-item">
+            <img src="assets/Email.svg" alt="Email" class="small-icon" />
+            <span><u>nakibhamza113@gmail.com</u></span>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/hamza-123n" target="_blank">
+            <img src="assets/github_1.svg" alt="GitHub" class="large-icon" />
+          </a>
+          <a href="https://www.sololearn.com/en/profile/33823777" target="_blank">
+            <img src="assets/solo.webp" alt="Sololearn" class="large-icon" />
+          </a>
+          <a href="https://hamza-123n.itch.io" target="_blank">
+            <img src="assets/itch.io_contact.svg" alt="Sololearn" class="large-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-copy">&copy; مواقع حمزة النقيب 2025. كل شيء في مكان واحد.<br>بناه حمزة النقيب</p>
+  </div>
+
+  <script>
+    function handleForm(event) {
+      event.preventDefault();
+      const name = event.target.querySelector('input[type="text"]').value;
+      const message = `Thanks, ${name}! Your message has been sent 🚀`;
+      alert(message);
+    }
+  </script> 
+</body>
+</html>
